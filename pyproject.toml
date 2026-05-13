@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "air-gesture-mouse"
+version = "0.1.0"
+description = "Use hand gestures captured by a webcam to control the mouse."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+authors = [
+  { name = "AirGestureMouse Contributors" }
+]
+keywords = [
+  "gesture-control",
+  "computer-vision",
+  "mediapipe",
+  "opencv",
+  "pyautogui",
+  "mouse-control"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Video :: Capture",
+  "Topic :: Scientific/Engineering :: Human Machine Interfaces"
+]
+dependencies = [
+  "mediapipe>=0.10.14,<0.11",
+  "numpy>=1.26,<3",
+  "opencv-contrib-python>=4.9,<5",
+  "PyAutoGUI>=0.9.54,<1"
+]
+
+[project.scripts]
+air-gesture-mouse = "air_gesture_mouse.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
